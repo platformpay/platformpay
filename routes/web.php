@@ -16,4 +16,12 @@ Route::get('/', function () {
 });
 Auth::routes();
 
-Route::get('/partner', 'HomeController@index')->name('home');
+
+Route::group(['prefix' => 'partner', 'middleware' => ['auth']], function(){
+       Route::get('/', 'DashboardController@index')->name('dashboard.index');
+       Route::get('/stats', 'StatsController@index')->name('dashboard.stats');
+       Route::get('/shops', 'ShopsController@index')->name('dashboard.shops');
+       Route::get('/balance', 'BalanceController@index')->name('dashboard.balance');
+       Route::get('/settings', 'SettingsController@index')->name('dashboard.settings');
+       Route::get('/help', 'HelpController@index')->name('dashboard.help');
+});

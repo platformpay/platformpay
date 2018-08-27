@@ -1,4 +1,4 @@
 @extends('layouts.dashboard')
 @section('content')
-<h1>Главная</h1>
+<h1>Настройки аккаунта</h1>
 @endsection

@@ -41,37 +41,37 @@
 
             <ul class="nav">
                 <li>
-                    <a href="#">
+                    <a href="{{ route('dashboard.index') }}">
                         <i class="pe-7s-home"></i>
                         <p>Главная</p>
                     </a>
                 </li>
 								<li>
-										<a href="#">
+										<a href="{{ route('dashboard.stats') }}">
 												<i class="pe-7s-display1"></i>
 												<p>Моя статистика</p>
 										</a>
 								</li>
 								<li>
-										<a href="#">
+										<a href="{{ route('dashboard.shops') }}">
 												<i class="pe-7s-cart"></i>
 												<p>Мои магазины</p>
 										</a>
 								</li>
 								<li>
-										<a href="#">
+										<a href="{{ route('dashboard.balance') }}">
 												<i class="pe-7s-diamond"></i>
 												<p>Мои финансы</p>
 										</a>
 								</li>
 								<li>
-										<a href="#">
+										<a href="{{ route('dashboard.settings') }}">
 												<i class="pe-7s-tools"></i>
 												<p>Настройки аккаунта</p>
 										</a>
 								</li>
 								<li>
-										<a href="#">
+										<a href="{{ route('dashboard.help') }}">
 												<i class="pe-7s-help1"></i>
 												<p>Справка platformpay</p>
 										</a>
@@ -113,12 +113,13 @@
             </div>
         </nav>
 
-
+  @yield('content')
 
 
 
 
     </div>
+
 </div>
 
 
