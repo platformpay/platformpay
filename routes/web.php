@@ -10,7 +10,11 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::group(['domain' => '{id}.platformpay.loc'], function () {
+  Route::get('/', function ($id) {
+    return 'THIS IS SHOP: ' . $id;
+  });
+});
 Route::get('/', function () {
     return view('welcome');
 });
